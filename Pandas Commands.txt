@@ -1,0 +1,53 @@
+pd.show_versions()	#versions of pandas and all dependencies
+pd.__version()		#versions of pandas only
+pd.show_version?	#docstring
+pd.#tab			#shows all functions/attributes of pd
+pd.read_csv(#shift+tab) #documentation
+pd.read_csv(#shift+tab twice) #further documentation
+pd.read_csv(#shift+tab thrice) #further further documentation
+
+pd.read_csv('.../data/olympics.csv',skiprows=4)	#after o if tab is pressed olympics.csv is filled automatically
+
+pd.read_excel()
+pd.read_json()
+pd.read_sql_table()
+
+df	#show entire dataframe in JuPyter notebook
+
+df.["Columnlabel1"]	#Series[] 	Series of columnl1
+df.Columnlabel1		#Series.	Caution: shows error if space is present in columnheading
+type(df.["Columnlabel1"]) 
+
+type(df.Columnlabel1)
+df.shape()		#shows dataframe row and column
+df.shape[0]	#give dataframe row number
+df.shape[1]	#gives dataframe column number
+df.head(3)	#gives top 3 rows
+df.tail(3)	#gives bottom 3 rows
+
+df.info()	#summary of dataframe. gives nos of entries, datatypes, NAN
+df.describe()	#statistics of dataframe
+
+
+df.value_counts() 	#returns count of all unique values. 
+			#dropna = true by default. If too many NAN, make, dropna = Flase
+			#by default sorted in descending order, descending = True (first elements occurs most)
+
+df.Athletes.sort_value()
+df.sort_value(by=['Edition',['Athlete']])
+
+df[df.Medal=='Gold']			#Gold medal
+df[df.Medal=='Gold'&df.Gender=='Women']	#Women with Gold medal
+df[df.Athelete.str.contains()]		#contains string
+df[df.Athelete.str.startswith()]	#start with string
+df[df.Athelete.str.isnumeric()]		#contains number
+
+df.groupby				#
+
+loc[]	#indexing with label
+iloc[]	#indexing with integer
+
+
+
+
+
