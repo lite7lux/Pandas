@@ -1,6 +1,8 @@
 
 
 # Pandas command
+==========================
+
 pd.show_versions()	#versions of pandas and all dependencies
 pd.__version()		#versions of pandas only
 pd.show_version?	#docstring
