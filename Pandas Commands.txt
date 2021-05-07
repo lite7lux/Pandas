@@ -29,6 +29,7 @@ df.info()	#summary of dataframe. gives nos of entries, datatypes, NAN
 df.describe()	#statistics of dataframe
 
 
+
 df.value_counts() 	#returns count of all unique values. 
 			#dropna = true by default. If too many NAN, make, dropna = Flase
 			#by default sorted in descending order, descending = True (first elements occurs most)
@@ -36,16 +37,36 @@ df.value_counts() 	#returns count of all unique values.
 df.Athletes.sort_value()
 df.sort_value(by=['Edition',['Athlete']])
 
+#boolean indexing
 df[df.Medal=='Gold']			#Gold medal
 df[df.Medal=='Gold'&df.Gender=='Women']	#Women with Gold medal
+
+#string handling
 df[df.Athelete.str.contains()]		#contains string
 df[df.Athelete.str.startswith()]	#start with string
 df[df.Athelete.str.isnumeric()]		#contains number
 
-df.groupby				#
 
+#groupby
+df.groupby				#Split by into groups by some criteria, apply a funtion 
+					#...combine results to a df
+.agg()					#multiple statistics in one calculation per group
+
+
+#indexing
+set_index()
+reset_index()
+sort_index()
 loc[]	#indexing with label
 iloc[]	#indexing with integer
+
+
+#reshaping
+reshaping
+stack()
+unstack()
+
+
 
 
 
